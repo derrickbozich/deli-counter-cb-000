@@ -11,7 +11,7 @@ end
 def now_serving(katz_deli)
   name = katz_deli[0].to_s
   puts "Currently serving #{name}."
-  katz_deli.unshift
+  katz_deli.shift
 
 end
 
