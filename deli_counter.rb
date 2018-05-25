@@ -21,10 +21,11 @@ def line(katz_deli)
   else
     line = ""
     katz_deli.each_with_index do |customer, index|
-      line.concat("#{index + 1}. #{customer} ")
+      line.concat(" #{index + 1}. #{customer}")
+      
     end
 
   end
-  puts "The line is currently: #{line}"
+  puts "The line is currently:#{line}"
 
 end
