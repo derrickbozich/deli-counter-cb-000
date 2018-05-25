@@ -33,6 +33,11 @@ def now_serving(katz_deli)
 end
 
 def line(katz_deli)
-  
+  line = ""
+  katz_deli.each_with_index do |customer, index|
+    line.concat("#{index + 1}. #{customer} ")
+    
+  end
+  "The line is currently: #{line}"
 
 end
