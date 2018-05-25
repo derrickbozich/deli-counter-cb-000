@@ -20,6 +20,7 @@ now_serving(katz_deli) #=> "Currently serving Grace."
 line(katz_deli) #=> "The line is currently: 1. Kent 2. Matz"
 
 def take_a_number(katz_deli, name)
+  katz_deli.push(name)
   index = katz_deli.size
   puts "Welcome, #{name}. You are number #{index} in line."
 
@@ -33,10 +34,14 @@ def now_serving(katz_deli)
 end
 
 def line(katz_deli)
-  line = ""
-  katz_deli.each_with_index do |customer, index|
-    line.concat("#{index + 1}. #{customer} ")
-    
+  if katz_deli.size == 0
+    "The line is currently empty."
+  else
+    line = ""
+    katz_deli.each_with_index do |customer, index|
+      line.concat("#{index + 1}. #{customer} ")
+    end
+
   end
   "The line is currently: #{line}"
 
