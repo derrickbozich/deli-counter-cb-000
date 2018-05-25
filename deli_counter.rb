@@ -17,7 +17,7 @@ end
 
 def line(katz_deli)
   if katz_deli.size == 0
-    "The line is currently empty."
+    puts "The line is currently empty."
   else
     line = ""
     katz_deli.each_with_index do |customer, index|
@@ -25,6 +25,6 @@ def line(katz_deli)
     end
 
   end
-  "The line is currently: #{line}"
+  puts "The line is currently: #{line}"
 
 end
